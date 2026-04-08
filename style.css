@@ -1,0 +1,385 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Garamond, 'Times New Roman', serif;
+    font-size: 11pt;
+    line-height: 1.15;
+    color: #000;
+    background: #fff;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    background: #000;
+    color: #fff;
+    padding: 1.5rem 0;
+    border-bottom: 2px solid #000;
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.hero h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* ===== PAGE HEADERS ===== */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.page-header h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* ===== CONTENT SECTIONS ===== */
+.executive-summary,
+.content {
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+strong {
+    font-weight: bold;
+}
+
+ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: #000;
+    text-decoration: underline;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.archive-note {
+    font-style: italic;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-left: 3px solid #000;
+}
+
+/* ===== FORMULA BOX ===== */
+.formula {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.formula p {
+    margin-bottom: 0.5rem;
+}
+
+/* ===== DATA TABLE ===== */
+.data-table {
+    margin: 2rem 0;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+thead {
+    background: #000;
+    color: #fff;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:hover {
+    background: #f9f9f9;
+}
+
+/* ===== COMPACT BOX ===== */
+.compact-box {
+    background: #000;
+    color: #fff;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.compact-statement {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ===== AMENDMENT BOX ===== */
+.amendment-box {
+    background: #f5f5f5;
+    border: 2px solid #ccc;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+}
+
+/* ===== POSTS SECTION ===== */
+.posts {
+    margin-top: 3rem;
+}
+
+.post {
+    margin-bottom: 3rem;
+}
+
+.post-header {
+    margin-bottom: 1rem;
+}
+
+.post-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.post-context {
+    font-style: italic;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.linkedin-embed {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.linkedin-embed iframe {
+    max-width: 100%;
+}
+
+.embed-placeholder {
+    background: #f5f5f5;
+    border: 2px dashed #ccc;
+    padding: 2rem;
+    text-align: center;
+    max-width: 504px;
+    margin: 0 auto;
+}
+
+.embed-placeholder p {
+    margin-bottom: 0.75rem;
+}
+
+.embed-placeholder ol {
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.post-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 3rem 0;
+}
+
+/* ===== CALL TO ACTION ===== */
+.cta {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid #ccc;
+}
+
+.btn {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    opacity: 0.7;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    main {
+        padding: 2rem 1rem;
+    }
+    
+    .hero h2,
+    .page-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    table {
+        font-size: 0.85rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+    
+    .compact-statement {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    nav {
+        display: none;
+    }
+    
+    .cta {
+        display: none;
+    }
+    
+    footer {
+        background: #fff;
+        color: #000;
+        border-top: 2px solid #000;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .linkedin-embed {
+        page-break-inside: avoid;
+    }
+}
