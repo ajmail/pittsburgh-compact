@@ -26,11 +26,49 @@
       <p>The music behind the campaign.</p>
     </div>
 
-    <iframe src="https://embed.tidal.com/playlists/7bd6a35e-661e-4511-97c6-b32defbc5f32" width="100%" height="400" allow="encrypted-media; fullscreen; clipboard-write https://embed.tidal.com; web-share" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox" style="color-scheme: light dark" title="TIDAL Embed Player"></iframe>
-  </main>
+  <div class="soundtrack-container" style="max-width: 660px; margin: 40px auto; font-family: sans-serif;">
+  
+  <div class="player-toggle" style="margin-bottom: 2rem; border-bottom: 1px solid #000; padding-bottom: 10px; display: flex; gap: 25px;">
+    <button onclick="switchPlayer('tidal')" id="btn-tidal" style="background:none; border:none; font-weight:bold; cursor:pointer; text-transform: uppercase; letter-spacing: 1px; padding: 0;">Tidal</button>
+    <button onclick="switchPlayer('spotify')" id="btn-spotify" style="background:none; border:none; font-weight:normal; cursor:pointer; text-transform: uppercase; letter-spacing: 1px; padding: 0; opacity: 0.5;">Spotify</button>
+    <button onclick="switchPlayer('apple')" id="btn-apple" style="background:none; border:none; font-weight:normal; cursor:pointer; text-transform: uppercase; letter-spacing: 1px; padding: 0; opacity: 0.5;">Apple Music</button>
+  </div>
+
+  <div id="tidal-player" class="music-player">
+    <iframe src="https://embed.tidal.com/playlists/7bd6a35e-661e-4511-97c6-b32defbc5f32" width="100%" height="450" frameborder="0" allow="encrypted-media; fullscreen; clipboard-write; web-share" style="border-radius:12px;"></iframe>
+  </div>
+
+  <div id="spotify-player" class="music-player" style="display:none;">
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/16ZtLi2AnjWXgjAVih58lP?utm_source=generator" width="100%" height="450" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <div id="apple-player" class="music-player" style="display:none;">
+    <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%; overflow:hidden; background:transparent; border-radius:12px;" src="https://embed.music.apple.com/us/playlist/the-pittsburgh-compact/pl.u-YWPghx1Pa0q"></iframe>
+  </div>
+
+</div>
+
+<script>
+function switchPlayer(service) {
+  // Hide all players
+  document.querySelectorAll('.music-player').forEach(p => p.style.display = 'none');
+  
+  // Reset button styles
+  document.querySelectorAll('.player-toggle button').forEach(b => {
+    b.style.fontWeight = 'normal';
+    b.style.opacity = '0.5';
+  });
+
+  // Show selected player and highlight button
+  document.getElementById(service + '-player').style.display = 'block';
+  const activeBtn = document.getElementById('btn-' + service);
+  activeBtn.style.fontWeight = 'bold';
+  activeBtn.style.opacity = '1';
+}
+</script>
 
   <footer>
-    <p>Campaign led by Ajmail Matin | Pittsburgh, PA</p>
+    <p>Campaign led by Ajmail Matin & Zevy Blokh | Pittsburgh, PA</p>
   </footer>
 </body>
 </html>
